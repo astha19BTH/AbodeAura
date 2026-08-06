@@ -846,6 +846,139 @@ a.slider-btn:hover::before {
 .banner-wrapper:hover .banner-content-style3 > h3 {
     animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
 }
+
+/* Custom legibility and equal size styling for home page banners */
+.hm1-banner .banner-wrapper {
+    aspect-ratio: 4 / 3;
+}
+.hm1-banner .banner-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.hm1-banner .banner-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.hm1-banner .banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hm1-banner .banner-position-top-left,
+.hm1-banner .banner-position-bottom-right,
+.hm1-banner .banner-position-bottom-left {
+    position: absolute;
+    padding: 30px;
+    z-index: 5;
+}
+
+.hm1-banner .banner-position-top-left {
+    top: 0;
+    left: 0;
+}
+
+.hm1-banner .banner-position-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.hm1-banner .banner-position-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+/* Color overrides for legibility based on background brightness */
+.hm1-banner .banner-position-top-left h2,
+.hm1-banner .banner-position-top-left h3 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.hm1-banner .banner-position-top-left h2 span {
+    color: #f3a395 !important;
+}
+
+.hm1-banner .banner-position-bottom-right h2,
+.hm1-banner .banner-position-bottom-right h3,
+.hm1-banner .banner-position-bottom-left h2,
+.hm1-banner .banner-position-bottom-left h3 {
+    color: #2c2c2c !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+.hm1-banner .banner-position-bottom-right h2 span,
+.hm1-banner .banner-position-bottom-left h2 span {
+    color: #d1a153 !important;
+}
+
+/* Custom equal size styling for the pb-95 banner section */
+.banner-area.pb-95 .banner-wrapper {
+    aspect-ratio: 16 / 9;
+}
+.banner-area.pb-95 .banner-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.banner-area.pb-95 .banner-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.banner-area.pb-95 .banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom equal size styling for the pb-95 banner section */
+.banner-area.pb-95 .banner-content-5 {
+    padding: 20px 60px;
+}
+.banner-area.pb-95 .banner-content-5 > h4 {
+    color: #f3a395 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.banner-area.pb-95 .banner-content-5 > h2 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.banner-area.pb-95 .banner-content-5 > h3 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.banner-area.pb-95 .banner-btn {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.banner-area.pb-95 .banner-btn:before {
+    background: #ffffff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+.banner-area.pb-95 .banner-btn:hover {
+    color: #f3a395 !important;
+}
+.banner-area.pb-95 .banner-btn:hover:before {
+    background: #f3a395 !important;
+}
+
+/* Centering header logo layout for other pages (using header-2 style) */
+.header-2 .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header-2 .col-lg-7.col-md-5.col-5 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+}
+.header-2 .logo.pr-155,
+.header-2 .sticky-logo.pr-155 {
+    padding-right: 0 !important;
+}
 /* section title */
 .section-title.text-center > h2 {
     color: #292929;
