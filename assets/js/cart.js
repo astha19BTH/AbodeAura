@@ -10,8 +10,8 @@
     // ==========================================================================
     // Configuration
     // ==========================================================================
-    // const WHATSAPP_PHONE = '919509134377';
-    const WHATSAPP_PHONE = '919887910830';
+    const WHATSAPP_PHONE = '919509134377';
+    // const WHATSAPP_PHONE = '919887910830';
     const DEFAULT_SITE_URL = 'https://astha19bth.github.io/AbodeAura/';
     const STORAGE_KEY = 'abode_aura_cart';
     const CUSTOMER_KEY = 'abode_aura_customer';
