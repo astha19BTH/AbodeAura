@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="assets/css/ionicons.min.css">
         <link rel="stylesheet" href="assets/css/bundle.css">
         <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cart.css?v=3.5">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -373,150 +374,96 @@
                     </div>
                 </div>
             </div>
-            <div class="product-cart-area hm-3-padding pt-120 pb-130">
+            <div class="product-cart-area hm-3-padding pt-80 pb-100">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="table-content table-responsive">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th class="product-name">products</th>
-                                            <th class="product-price">products name</th>
-                                            <th class="product-name">price</th>
-                                            <th class="product-price">quantity</th>
-                                            <th class="product-quantity">total</th>
-                                            <th class="product-subtotal">delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/4.jpg" alt=""></a>
-                                            </td>
-                                            <td class="product-name">
-                                                <a href="#">Ptttery Tea Mug</a>
-                                            </td>
-                                            <td class="product-price"><span class="amount">$128.00</span></td>
-                                            <td class="product-quantity">
-                                                <div class="quantity-range">
-                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                </div>
-                                            </td>
-                                            <td class="product-subtotal">$128.00</td>
-                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/5.jpg" alt=""></a>
-                                            </td>
-                                            <td class="product-name">
-                                                <a href="#">Pottery Showpiece</a>
-                                            </td>
-                                            <td class="product-price"><span class="amount">$150.00</span></td>
-                                            <td class="product-quantity">
-                                                <div class="quantity-range">
-                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                </div>
-                                            </td>
-                                            <td class="product-subtotal">$150.00</td>
-                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/6.jpg" alt=""></a>
-                                            </td>
-                                            <td class="product-name">
-                                                <a href="#">Pottery Water Jug</a>
-                                            </td>
-                                            <td class="product-price"><span class="amount">$100.00</span></td>
-                                            <td class="product-quantity">
-                                                <div class="quantity-range">
-                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                </div>
-                                            </td>
-                                            <td class="product-subtotal">$100.00</td>
-                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/7.jpg" alt=""></a>
-                                            </td>
-                                            <td class="product-name">
-                                                <a href="#">Pottery Flower Vase</a>
-                                            </td>
-                                            <td class="product-price"><span class="amount">$190.00</span></td>
-                                            <td class="product-quantity">
-                                                <div class="quantity-range">
-                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                </div>
-                                            </td>
-                                            <td class="product-subtotal">$190.00</td>
-                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <!-- Empty State -->
+                    <div id="cart-page-empty" style="display: none; text-align: center; padding: 60px 20px;">
+                        <div style="font-size: 54px; margin-bottom: 16px;">🛍️</div>
+                        <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 28px; color: #222; margin-bottom: 10px;">Your Cart is Empty</h3>
+                        <p style="color: #777; font-size: 15px; margin-bottom: 24px;">Explore our exclusive collection of hand-painted cushions and bring art to your home.</p>
+                        <a href="gallery.html" class="cr-btn btn-style" style="background: #1f1f1f; color: #fff; padding: 12px 30px; border-radius: 25px; text-transform: uppercase; font-weight: 600; font-size: 13px; display: inline-block;"><span>Explore Gallery</span></a>
+                    </div>
+
+                    <!-- Cart Content -->
+                    <div id="cart-page-content">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="table-content table-responsive" style="border: 1px solid #ebebeb; border-radius: 8px; overflow: hidden; background: #fff;">
+                                    <table style="margin-bottom: 0;">
+                                        <thead style="background: #faf8f5;">
+                                            <tr>
+                                                <th class="product-thumbnail" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #444;">Product</th>
+                                                <th class="product-name" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #444;">Item Details</th>
+                                                <th class="product-price" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #444;">Price</th>
+                                                <th class="product-quantity" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #444;">Quantity</th>
+                                                <th class="product-subtotal" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #444;">Subtotal</th>
+                                                <th class="product-remove" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #444;">Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cart-page-table-body">
+                                            <!-- Dynamically populated by cart.js -->
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="cart-shiping-update">
-                                <div class="cart-shipping">
-                                    <a class="btn-style cr-btn" href="#">
-                                        <span>continue shopping</span>
-                                    </a>
-                                </div>
-                                <div class="update-checkout-cart">
-                                    <div class="update-cart">
-                                        <button class="btn-style cr-btn"><span>update</span></button>
+
+                        <!-- Customer Details & Order Total Section -->
+                        <div class="row" style="margin-top: 40px;">
+                            <div class="col-lg-7 col-md-6">
+                                <div style="background: #faf8f5; border: 1px solid #e9e6df; border-radius: 8px; padding: 25px 30px;">
+                                    <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; color: #1f1f1f; margin-bottom: 18px; border-bottom: 1px solid #e0ddd7; padding-bottom: 10px;">
+                                        Delivery Information
+                                    </h3>
+                                    <div class="cart-form-group" style="margin-bottom: 14px;">
+                                        <label for="page-cust-name" style="font-size: 13px; font-weight: 600; color: #444; display: block; margin-bottom: 4px;">Full Name <span style="color: #e53935;">*</span></label>
+                                        <input type="text" id="page-cust-name" class="cart-form-input" placeholder="e.g. Pooja Sharma" style="height: 42px; font-size: 14px; background: #fff;" required>
                                     </div>
-                                    <div class="update-cart">
-                                        <a class="btn-style cr-btn" href="#">
-                                            <span>checkout</span>
-                                        </a>
+                                    <div class="cart-form-group" style="margin-bottom: 14px;">
+                                        <label for="page-cust-phone" style="font-size: 13px; font-weight: 600; color: #444; display: block; margin-bottom: 4px;">WhatsApp / Phone Number</label>
+                                        <input type="tel" id="page-cust-phone" class="cart-form-input" placeholder="e.g. +91 98765 43210" style="height: 42px; font-size: 14px; background: #fff;">
+                                    </div>
+                                    <div class="cart-form-group" style="margin-bottom: 14px;">
+                                        <label for="page-cust-address" style="font-size: 13px; font-weight: 600; color: #444; display: block; margin-bottom: 4px;">Delivery Address & Pincode <span style="color: #e53935;">*</span></label>
+                                        <textarea id="page-cust-address" class="cart-form-textarea" rows="3" placeholder="House/Flat No., Apartment, Street, City, State, Pincode" style="font-size: 14px; background: #fff;" required></textarea>
+                                    </div>
+                                    <div class="cart-form-group">
+                                        <label for="page-cust-note" style="font-size: 13px; font-weight: 600; color: #444; display: block; margin-bottom: 4px;">Order Notes (Optional)</label>
+                                        <input type="text" id="page-cust-note" class="cart-form-input" placeholder="Gift wrap, special delivery instructions, etc." style="height: 42px; font-size: 14px; background: #fff;">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-sm-6">
-                            <div class="discount-code">
-                                <h4>enter your discount code</h4>
-                                <div class="coupon">
-                                    <input type="text">
-                                    <input class="cart-submit" type="submit" value="enter">
+
+                            <div class="col-lg-5 col-md-6">
+                                <div style="background: #faf8f5; border: 1px solid #e9e6df; border-radius: 8px; padding: 25px 30px;">
+                                    <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; color: #1f1f1f; margin-bottom: 18px; border-bottom: 1px solid #e0ddd7; padding-bottom: 10px;">
+                                        Order Summary
+                                    </h3>
+                                    <div style="display: flex; justify-content: space-between; font-size: 15px; color: #666; margin-bottom: 12px;">
+                                        <span>Subtotal</span>
+                                        <span id="cart-page-subtotal" style="font-weight: 600; color: #222;">₹0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 15px; color: #666; margin-bottom: 14px;">
+                                        <span>Estimated Delivery</span>
+                                        <span style="font-weight: 600; color: #2e7d32;">Contact on WhatsApp</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 18px; font-weight: 700; color: #1f1f1f; padding-top: 14px; border-top: 1px dashed #dedbd4; margin-bottom: 22px;">
+                                        <span>Grand Total</span>
+                                        <span id="cart-page-total" style="font-size: 24px; color: #d1a153; font-family: 'Inter', sans-serif;">₹0</span>
+                                    </div>
+
+                                    <button type="button" onclick="AbodeCart.sendWhatsAppOrder('page')" class="whatsapp-checkout-btn" style="padding: 15px 20px; font-size: 15px; margin-bottom: 12px;">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.044-1.926-.465-1.574-.649-2.582-2.253-2.661-2.359-.079-.105-.633-.843-.633-1.608 0-.765.397-1.144.538-1.299.141-.156.309-.195.412-.195.103 0 .206.001.296.006.096.005.226-.037.353.267.13.312.443 1.08.482 1.16.039.08.065.174.013.278-.052.104-.078.169-.156.26-.079.091-.166.203-.238.273-.08.077-.163.161-.07.321.093.161.412.679.883 1.098.607.541 1.119.709 1.28.789.161.08.256.069.351-.041.095-.11.408-.475.518-.638.109-.163.22-.136.37-.08.151.056.953.449 1.117.531.164.082.273.123.313.191.039.069.039.4-.105.805z"/>
+                                            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.662 1.442 5.178L2 22l4.981-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.172c-1.678 0-3.238-.495-4.551-1.353l-.326-.213-2.955.775.789-2.88-.231-.368A8.146 8.146 0 0 1 3.828 12c0-4.506 3.666-8.172 8.172-8.172 4.506 0 8.172 3.666 8.172 8.172 0 4.506-3.666 8.172-8.172 8.172z"/>
+                                        </svg>
+                                        <span>Complete Order on WhatsApp</span>
+                                    </button>
+
+                                    <div style="text-align: center;">
+                                        <a href="gallery.html" style="font-size: 13px; color: #777; text-decoration: underline;">&larr; Continue Browsing Gallery</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-sm-6">
-                            <div class="shop-total">
-                                <h3>cart total</h3>
-                                <ul>
-                                    <li>
-                                        sub total
-                                        <span>$909.00</span>
-                                    </li>
-                                    <li>
-                                        tax
-                                        <span>$9.00</span>
-                                    </li>
-                                    <li class="order-total">
-                                        shipping
-                                        <span>0</span>
-                                    </li>
-                                    <li>
-                                        order total
-                                        <span>$918.00</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="cart-btn text-center mb-15">
-                                <a href="#">payment</a>
-                            </div>
-                            <div class="continue-shopping-btn text-center">
-                                <a href="#">continue shopping</a>
                             </div>
                         </div>
                     </div>
@@ -708,6 +655,7 @@
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+    <script charset="utf-8" src="assets/js/cart.js?v=3.5"></script>
     </body>
 
 <!-- Mirrored from preview.hasthemes.com/nokshi/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2026 07:21:37 GMT -->
